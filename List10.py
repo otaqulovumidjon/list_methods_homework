@@ -8,17 +8,19 @@ def main(list1):
     """
 
     i = 0
-    b = 0
-    n = 0
+    ls00 = []
+    ls01 = []
+    ls02 = []
 
     while i < len(list1):
         if list1[i] == 1:
-           b += 1
-        
-        elif list1[i] == 0:
-            n += 1
-            
+            ls01.append(list1[i])
+        else:
+            if list1[i] == 0:
+                ls02.append(list1[i])
         i += 1
-    return f"{[b, n]}"
+    ls00.append(len(ls01))
+    ls00.append(len(ls02))
+    return ls00
 
-print(main([1, 1, 0, 0, 1, 0, 1, 0]))
+print(main([0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1]))

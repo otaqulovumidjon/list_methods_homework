@@ -11,8 +11,8 @@ def main(fruits):
     while i < len(fruits):
         if fruits[i] == "apple":
             fruits.pop(i)
-            continue
-            i -= 1
+            continue    # Bu ham ishlaydi
+            # i -= 1      # Bu ham ishlaydi 
         i += 1
     return fruits
 
